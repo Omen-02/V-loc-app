@@ -952,7 +952,7 @@ function finish(canvas){
   encode(canvas, function(blob){
     busyShot = false; if(camReady) $('btnShot').disabled = false;
     if(!blob){ toast('Gagal menyimpan foto'); return; }
-    var p = {id:Date.now()+Math.random(), blob:blob, url:URL.createObjectURL(blob), name:'v-loc_roc_'+stamp()+'.jpg'};
+    var p = {id:Date.now()+Math.random(), blob:blob, url:URL.createObjectURL(blob), name:'V-loc_roc_'+stamp()+'.jpg'};
     photos.unshift(p); renderGallery();
     toast('Foto diambil ✔ ' + w + '×' + h + ' · ' + (blob.size/1e6).toFixed(2) + ' MB');
     if(S.autoDownload) download(p);
